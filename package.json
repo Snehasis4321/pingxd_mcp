@@ -1,0 +1,19 @@
+{
+  "name": "@pingxd/mcp",
+  "version": "0.1.0",
+  "description": "PingXD MCP server for network and web diagnostics",
+  "type": "module",
+  "main": "src/stdio.js",
+  "bin": {
+    "pingxd-mcp": "src/stdio.js"
+  },
+  "scripts": {
+    "start": "node src/stdio.js"
+  },
+  "keywords": ["mcp", "pingxd", "network diagnostics"],
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  }
+}
