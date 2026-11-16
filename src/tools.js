@@ -91,8 +91,8 @@ const tools = [
   },
   {
     name: "pingxd_whois_test",
-    description: "Run a PingXD WHOIS lookup and return the raw result.",
-    schema: { url, location },
+    description: "Run a PingXD WHOIS/RDAP domain lookup. Accepts a domain or URL (subdomains are reduced to the registrable domain). Returns registrar, dates, status, nameservers, DNSSEC and the raw registry data.",
+    schema: { url: z.string().min(1).max(2048).describe("Domain name or URL, for example example.com") },
     path: "/test/whois_test",
     body: (input) => input,
   },
