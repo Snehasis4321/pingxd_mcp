@@ -1,6 +1,26 @@
 # PingXD MCP server
 
-PingXD exposes network and web diagnostics to MCP-compatible agents. Tools return the raw PingXD response so the connected agent can inspect and explain it.
+Connect PingXD to Claude, Cursor, Kiro, and other MCP-compatible AI agents. The agent can run PingXD diagnostics, inspect raw results, and explain performance, DNS, SSL, WHOIS, API, and network issues.
+
+- Public setup guide: https://pingxd.com/mcp
+- Remote MCP endpoint: `https://api.pingxd.com/mcp`
+- Local package: `@pingxd/mcp`
+
+## Authentication and API keys
+
+Create a named key from [PingXD API key settings](https://pingxd.com/profile/api-keys). The full key is shown only once. Store it as a secret and revoke it if an agent or device is no longer trusted.
+
+The remote server accepts either:
+
+```text
+Authorization: Bearer pxd_live_your_key
+```
+
+or:
+
+```text
+X-API-Key: pxd_live_your_key
+```
 
 ## Remote HTTP setup
 
